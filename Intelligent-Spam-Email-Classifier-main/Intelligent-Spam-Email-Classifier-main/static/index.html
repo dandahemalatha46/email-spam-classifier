@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Spam Detector | Intelligent Email Filtering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-shield-alt"></i> SpamGuard AI</h1>
+            <p>Advanced Naïve Bayes Classifier</p>
+        </header>
+
+        <main>
+            <div class="card input-section">
+                <textarea id="emailInput" placeholder="Paste the email content here to analyze..."></textarea>
+                <div class="action-bar">
+                    <button onclick="analyzeSpam()" id="analyzeBtn">
+                        <i class="fas fa-search"></i> Detect Spam
+                    </button>
+                    <button onclick="clearText()" class="secondary">
+                        <i class="fas fa-eraser"></i> Clear
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultCard" class="card result-section hidden">
+                <div class="result-icon">
+                    <i id="statusIcon" class="fas fa-check-circle"></i>
+                </div>
+                <h2 id="resultTitle">Safe</h2>
+                <p id="resultDesc">This email appears to be legitimate.</p>
+                <div class="confidence-meter">
+                    <span>Confidence: <strong id="confidenceScore">98.5%</strong></span>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Naïve Bayes Algorithm • CSE Final Year Project</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
